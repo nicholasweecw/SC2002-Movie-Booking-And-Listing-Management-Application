@@ -1,15 +1,15 @@
 package Model;
 
 import Controller.MovieController;
+import Model.UserType;
 
-// public class Admin extends User {
-public class Admin {
-  private int id;
+public class Admin extends User {
+
   private String username;
   private String password;
 
-  public Admin(String username, String password) {
-    // super();
+  public Admin(String username, String password, String name) {
+    super(UserType.ADMIN, name);
     this.username = username;
     this.password = password;
   }

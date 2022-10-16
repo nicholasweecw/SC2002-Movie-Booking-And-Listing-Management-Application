@@ -1,16 +1,16 @@
 package Controller;
-import java.util.Arrays;
 
+import Model.AgeRestriction;
 import Model.Movie;
 import Model.MovieStatus;
 import Model.MovieType;
-import Model.AgeRestriction;
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 // enum ageRestriction {PG13, NC16, M18, R21};
 
 public class MovieController {
+
   Scanner sc = new Scanner(System.in);
 
   public Movie createMovie() {
@@ -28,23 +28,23 @@ public class MovieController {
       "3. Now showing\n\n" +
       "Select movie status (number): "
     );
-		int typeNo = sc.nextInt();
-		MovieStatus movieStatus = MovieStatus.NA;
-		switch(typeNo) {
-			case 1:
+    int typeNo = sc.nextInt();
+    MovieStatus movieStatus = MovieStatus.NA;
+    switch (typeNo) {
+      case 1:
         movieStatus = MovieStatus.COMING_SOON;
-				break;
-			case 2:
+        break;
+      case 2:
         movieStatus = MovieStatus.PREVIEW;
-				break;
-			case 3:
+        break;
+      case 3:
         movieStatus = MovieStatus.NOW_SHOWING;
         break;
-			case 4:
+      case 4:
         movieStatus = MovieStatus.END_OF_SHOWING;
         break;
-			default:
-				System.out.println("Wrong input!\n" + "Returning to menu...");
+      default:
+        System.out.println("Wrong input!\n" + "Returning to menu...");
     }
 
     System.out.print(
@@ -54,20 +54,20 @@ public class MovieController {
       "3. Blockbuster\n\n" +
       "Select movie type (number): "
     );
-		typeNo = sc.nextInt();
-		MovieType movieType = MovieType.NA;
-		switch(typeNo) {
-			case 1:
-				movieType = MovieType.TWO_D;
-				break;
-			case 2:
-				movieType = MovieType.THREE_D;
-				break;
-			case 3:
-				movieType = MovieType.BLOCKBUSTER;
-				break;
-			default:
-				System.out.println("Wrong input!\n" + "Returning to menu...");
+    typeNo = sc.nextInt();
+    MovieType movieType = MovieType.NA;
+    switch (typeNo) {
+      case 1:
+        movieType = MovieType.TWO_D;
+        break;
+      case 2:
+        movieType = MovieType.THREE_D;
+        break;
+      case 3:
+        movieType = MovieType.BLOCKBUSTER;
+        break;
+      default:
+        System.out.println("Wrong input!\n" + "Returning to menu...");
     }
 
     System.out.print(
@@ -75,26 +75,26 @@ public class MovieController {
       "1. PG13\n" +
       "2. NC16\n" +
       "3. M18\n" +
-      "4. R21\n" + 
+      "4. R21\n" +
       "Select age restriction (number): "
     );
-		typeNo = sc.nextInt();
+    typeNo = sc.nextInt();
     AgeRestriction ageRestriction = AgeRestriction.NA;
-		switch(typeNo) {
-			case 1:
+    switch (typeNo) {
+      case 1:
         ageRestriction = AgeRestriction.PG13;
-				break;
-			case 2:
+        break;
+      case 2:
         ageRestriction = AgeRestriction.NC16;
-				break;
-			case 3:
+        break;
+      case 3:
         ageRestriction = AgeRestriction.M18;
-				break;
+        break;
       case 4:
         ageRestriction = AgeRestriction.R21;
-				break;
-			default:
-				System.out.println("Wrong input!\n" + "Returning to menu...");
+        break;
+      default:
+        System.out.println("Wrong input!\n" + "Returning to menu...");
     }
     sc.nextLine();
 
@@ -107,8 +107,17 @@ public class MovieController {
     System.out.println("Enter cast");
     String cast = sc.nextLine();
 
-    Movie m = new Movie(id, name, movieStatus, movieType, ageRestriction, synopsis, director, cast, 0);
+    Movie m = new Movie(
+      id,
+      name,
+      movieStatus,
+      movieType,
+      ageRestriction,
+      synopsis,
+      director,
+      cast,
+      0
+    );
     return m;
   }
-  
 }
