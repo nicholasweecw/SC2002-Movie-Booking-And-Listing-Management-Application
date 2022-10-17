@@ -1,6 +1,8 @@
 package Model;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
   private int id;
   private String name;
   private MovieStatus status;

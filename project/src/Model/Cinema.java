@@ -1,6 +1,8 @@
 package Model;
 
-public class Cinema {
+import java.io.Serializable;
+
+public class Cinema implements Serializable {
     // private int maxSeats = 143;
     private int roomNumber;
     // private Seat[] seats;

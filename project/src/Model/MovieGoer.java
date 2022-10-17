@@ -1,7 +1,7 @@
 package Model;
 
 import Controller.MovieGoerController;
-import Model.Movie;
+import Model.Movie; // Is all these imports needed?
 // import Model.MovieTicket;
 import Model.User;
 import Model.UserType;

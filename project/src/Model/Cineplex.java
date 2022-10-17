@@ -1,8 +1,9 @@
 package Model;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Cineplex {
+public class Cineplex implements Serializable {
     private String location;
     private String name;
     private ArrayList<Movie> movies;
