@@ -61,4 +61,7 @@ public class MovieGoer extends User {
 
   // Allows user to add a review
   public void addReview() {}
+
+  // Allows user to view a review for a movie
+  public void viewMovieReview() {}
 }

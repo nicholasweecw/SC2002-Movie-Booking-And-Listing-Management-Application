@@ -111,7 +111,9 @@ public class MovieGoerController {
     }
   }
 
-  public static boolean checkSeatAvailability() {}
+  public static boolean checkSeatAvailability() {
+    return false;
+  }
 
   public static void listRankings() {}
 }
