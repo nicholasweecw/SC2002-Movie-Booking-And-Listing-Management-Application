@@ -1,9 +1,8 @@
 package Model;
 
-import Model.UserType;    // Is this needed?? 
 import java.io.Serializable;
 
-public class User implements Serializable{
+public class User implements Serializable {
 
   protected UserType userType;
   protected long id;

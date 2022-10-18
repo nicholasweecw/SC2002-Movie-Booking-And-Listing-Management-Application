@@ -25,6 +25,8 @@ public class App {
     System.out.println(user.getUserType());
     System.out.println(user.getId());
     System.out.println(user.getName());
-    user.searchMovie();
+    MovieGoerController.searchMovie();
+    MovieGoerController.listAllMovies();
+    MovieGoerController.showAllSeats();
   }
 }

@@ -1,10 +1,6 @@
 package Model;
 
 import Controller.MovieGoerController;
-import Model.Movie; // Is all these imports needed?
-// import Model.MovieTicket;
-import Model.User;
-import Model.UserType;
 
 public class MovieGoer extends User {
 
@@ -30,12 +26,12 @@ public class MovieGoer extends User {
   }
 
   // Prints out an array of movies that match the movie name provided - not case-sensitive.
-  public void searchMovie() {
-    MovieGoerController.searchMovie();
-  }
+  // public void searchMovie() {
+  //   MovieGoerController.searchMovie();
+  // }
 
   // Prints out all the movies available
-  public void listAllMovies() {}
+  // public void listAllMovies() {}
 
   // Shows all seats, and whether they are available
   public void showAllSeats(String cinemaCode, int movieId, int time) {}
@@ -62,9 +58,6 @@ public class MovieGoer extends User {
 
   // Lists the tickets the user has in his inventory, as well as all information about it.
   public void viewBookingHistory() {}
-
-  // Lists rankings of all movies or movies of a selected type
-  public void listRankings() {}
 
   // Allows user to add a review
   public void addReview() {}
