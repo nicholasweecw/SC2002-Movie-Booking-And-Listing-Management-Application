@@ -15,8 +15,14 @@ public class Admin extends User {
   }
 
   public Movie createMovieListing() {
-    MovieController movieController = new MovieController();
-    Movie m = movieController.createMovie();
+    // MovieController movieController = new MovieController();
+    Movie m = MovieController.createMovie();
+    return m;
+  }
+
+  public Movie updateMovieListing(Movie movie) {
+    // MovieController movieController = new MovieController();
+    Movie m = MovieController.updateMovie(movie);
     return m;
   }
 }

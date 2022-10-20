@@ -24,7 +24,7 @@ public class Movie implements Serializable {
     String synopsis,
     String director,
     String cast,
-    float overallRating 
+    float overallRating // not used yet
   ) {
     this.id = id;
     this.name = name;
@@ -56,23 +56,49 @@ public class Movie implements Serializable {
     return this.status;
   }
 
+  public void setStatus(MovieStatus movieStatus) {
+    this.status = movieStatus;
+  }
+
   public MovieType getType() {
     return this.type;
+  }
+
+  public void setType(MovieType movieType) {
+    this.type = movieType;
+
   }
 
   public AgeRestriction getAgeRestriction() {
     return this.ageRestriction;
   }
 
+  public void setAgeRestriction(AgeRestriction ageRestriction) {
+    this.ageRestriction = ageRestriction;
+  }
+
   public String getSynopsis() {
     return this.synopsis;
+  }
+
+  public void setSynopsis(String synopsis) {
+    this.synopsis = synopsis;
   }
 
   public String getDirector() {
     return this.director;
   }
 
+  public void setDirector(String director) {
+    this.director = director;
+  }
+
   public String getCast() {
     return this.cast;
   }
+
+  public void setCast(String cast) {
+    this.cast = cast;
+  }
+
 }

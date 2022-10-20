@@ -10,6 +10,7 @@ public final class Database implements Serializable {
   // private ArrayList<Person> personList;
   private String filename = "database.ser";
   private ArrayList<Admin> adminList;
+  private ArrayList<Movie> movieList;
   private ArrayList<Cineplex> cineplexList;
   private ArrayList<MovieGoer> movieGoerList;
 
@@ -17,6 +18,7 @@ public final class Database implements Serializable {
     // On creation deserialize data
     // personList = new ArrayList<Person>();
     adminList = new ArrayList<Admin>();
+    movieList = new ArrayList<Movie>();
     cineplexList = new ArrayList<Cineplex>();
     movieGoerList = new ArrayList<MovieGoer>();
 
@@ -29,12 +31,14 @@ public final class Database implements Serializable {
       // Person[] personArray = (Person[])in.readObject();
       // Must be in order
       Admin[] adminArray = (Admin[]) in.readObject();
+      Movie[] movieArray = (Movie[]) in.readObject();
       Cineplex[] cineplexArray = (Cineplex[]) in.readObject();
       MovieGoer[] movieGoerArray = (MovieGoer[]) in.readObject();
 
       // Convert arrays into arrayList
       // Collections.addAll(personList, personArray);
       Collections.addAll(adminList, adminArray);
+      Collections.addAll(movieList, movieArray);
       Collections.addAll(cineplexList, cineplexArray);
       Collections.addAll(movieGoerList, movieGoerArray);
 
@@ -72,6 +76,8 @@ public final class Database implements Serializable {
       // personList.toArray(personArray);
       Admin[] adminArray = new Admin[adminList.size()];
       adminList.toArray(adminArray);
+      Movie[] movieArray = new Movie[movieList.size()];
+      movieList.toArray(movieArray);
       Cineplex[] cineplexArray = new Cineplex[cineplexList.size()];
       cineplexList.toArray(cineplexArray);
       MovieGoer[] movieGoerArray = new MovieGoer[movieGoerList.size()];
