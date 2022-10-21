@@ -26,7 +26,7 @@ public class App {
   }
 
   public static void initialise() {
-    Database db = new Database();
+    // Database db = new Database();
     MovieController movieController = new MovieController();
     InputController inputController = new InputController();
   }
@@ -55,6 +55,8 @@ public class App {
 
   public static void hochi() {
     // Initialize database
+    Database db = new Database();
+
     MovieGoer user = new MovieGoer("Ho Chi", "90000000", 69);
     System.out.println(user.getUserType());
     System.out.println(user.getId());
