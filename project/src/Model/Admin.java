@@ -14,6 +14,14 @@ public class Admin extends User {
     this.password = password;
   }
 
+  public String getUsername() {
+    return this.username;
+  }
+
+  public String getPassword() {
+    return this.password;
+  }
+
   public Movie createMovieListing() {
     // MovieController movieController = new MovieController();
     Movie m = MovieController.createMovie();
