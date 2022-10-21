@@ -4,6 +4,7 @@ import Model.Movie;
 import Model.MovieGoer;
 import Model.MovieStatus;
 import Model.MovieType;
+import Model.AgeRestriction;
 
 /*
  * i use this app to test controllers
@@ -11,40 +12,50 @@ import Model.MovieType;
 public class App {
 
   public static void main(String[] args) {
-    Admin admin = new Admin("timothyjblew", "password", "Timothy");
 
     // init for all controllers
     initialise();
 
-    Movie movie = admin.createMovieListing();
-    System.out.println(movie.getId());
-    System.out.println(movie.getName());
-    System.out.println(movie.getStatus());
-    System.out.println(movie.getType());
-    System.out.println(movie.getAgeRestriction());
-    System.out.println(movie.getSynopsis());
-    System.out.println(movie.getDirector());
-    movie = admin.updateMovieListing(movie);
-    System.out.println(movie.getId());
-    System.out.println(movie.getName());
-    System.out.println(movie.getStatus());
-    System.out.println(movie.getType());
-    System.out.println(movie.getAgeRestriction());
-    System.out.println(movie.getSynopsis());
-    System.out.println(movie.getDirector());
+    timothy();
 
-    // Testing Movie Goer Class
-    // MovieGoer user = new MovieGoer("Ho Chi", "90000000", 69);
-    // System.out.println(user.getUserType());
-    // System.out.println(user.getId());
-    // System.out.println(user.getName());
-    // MovieGoerController.searchMovie();
-    // MovieGoerController.listAllMovies();
-    // MovieGoerController.showAllSeats();
+    // hochi();    
   }
 
   public static void initialise() {
     MovieController movieController = new MovieController();
     InputController inputController = new InputController();
+  }
+
+  public static void timothy() {
+    Admin admin = new Admin("timothyjblew", "password", "Timothy");
+    // Movie movie = admin.createMovieListing();
+    Movie movie = new Movie(
+      2, 
+      "Topgun", 
+      MovieStatus.COMING_SOON, 
+      MovieType.TWO_D,
+      AgeRestriction.PG13,
+      "flying planes",
+      "Tom Cruise",
+      "cast is a string, is it worth changing it to String[]?",
+      0
+    );
+    movie.getEverything();
+
+    movie = admin.updateMovieListing(movie);
+    movie.getEverything();
+
+    admin.deleteMovieListing(movie);
+  }
+
+  public static void hochi() {
+    // Testing Movie Goer Class
+    MovieGoer user = new MovieGoer("Ho Chi", "90000000", 69);
+    System.out.println(user.getUserType());
+    System.out.println(user.getId());
+    System.out.println(user.getName());
+    MovieGoerController.searchMovie();
+    MovieGoerController.listAllMovies();
+    MovieGoerController.showAllSeats();
   }
 }

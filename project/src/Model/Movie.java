@@ -101,4 +101,15 @@ public class Movie implements Serializable {
     this.cast = cast;
   }
 
+  // for local dev
+  public void getEverything() {
+    System.out.println(this.getId());
+    System.out.println(this.getName());
+    System.out.println(this.getStatus());
+    System.out.println(this.getType());
+    System.out.println(this.getAgeRestriction());
+    System.out.println(this.getSynopsis());
+    System.out.println(this.getDirector());
+  }
+
 }

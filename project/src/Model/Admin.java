@@ -25,4 +25,9 @@ public class Admin extends User {
     Movie m = MovieController.updateMovie(movie);
     return m;
   }
+
+  public void deleteMovieListing(Movie movie) {
+    // MovieController movieController = new MovieController();
+    MovieController.deleteMovie(movie);
+  }
 }

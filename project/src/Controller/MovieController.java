@@ -130,6 +130,7 @@ public class MovieController {
     System.out.println("Enter name:");
     String name = InputController.getString();
 
+    System.out.println("Current status: " + movie.getStatus());
     System.out.print(
       "Possible movie statuses: \n" +
       "1. Coming soon\n" +
@@ -137,7 +138,6 @@ public class MovieController {
       "3. Now showing\n\n" +
       "Select movie status (number): "
     );
-    System.out.println("Current status: " + movie.getStatus());
     int typeNo = InputController.getInt();
     MovieStatus movieStatus = MovieStatus.NA;
     switch (typeNo) {
@@ -157,6 +157,7 @@ public class MovieController {
         System.out.println("Wrong input!\n" + "Returning to menu...");
     }
 
+    System.out.println("Current type: " + movie.getType());
     System.out.print(
       "Possible movie types: \n" +
       "1. 2D\n" +
@@ -164,7 +165,6 @@ public class MovieController {
       "3. Blockbuster\n\n" +
       "Select movie type (number): "
     );
-    System.out.println("Current type: " + movie.getType());
     typeNo = InputController.getInt();
     MovieType movieType = MovieType.NA;
     switch (typeNo) {
@@ -181,6 +181,7 @@ public class MovieController {
         System.out.println("Wrong input!\n" + "Returning to menu...");
     }
 
+    System.out.println("Current age restriction: " + movie.getAgeRestriction());
     System.out.print(
       "Possible age restrictions: \n" +
       "1. PG13\n" +
@@ -189,7 +190,6 @@ public class MovieController {
       "4. R21\n" +
       "Select age restriction (number): "
     );
-    System.out.println("Current age restriction: " + movie.getAgeRestriction());
     typeNo = InputController.getInt();
     AgeRestriction ageRestriction = AgeRestriction.NA;
     switch (typeNo) {
@@ -233,4 +233,11 @@ public class MovieController {
     return movie;
   }
 
+  public static void deleteMovie(Movie movie) {
+    /*
+     * TODO
+     * ask alistair how to delete
+     */
+    System.out.println("Deleting movie " + movie.getName());
+  }
 }
