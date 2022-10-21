@@ -1,6 +1,7 @@
 package Model;
 
 import Constants.Constants;
+import Controller.ControllerUtility;
 import java.io.Serializable;
 
 public class Cinema implements Serializable {
@@ -64,7 +65,6 @@ public class Cinema implements Serializable {
     // );
     int row = seatnumber / 10;
     int col = seatnumber % 10;
-    System.out.printf("%d %d\n", row, col);
     // This value is hardcoded.
     String s = String.format("%" + 34 + "s", "Movie Screen");
     // System.out.printf("%15s\n", s);
@@ -140,5 +140,17 @@ public class Cinema implements Serializable {
     System.out.println("|xx|: Seat is taken");
     System.out.println("|!!|: Seat is currently being selected");
     System.out.println();
+  }
+
+  public void listMovies() {
+    System.out.println("Movies showing in this cinema:");
+    for (int i = 0; i < 12; i++) {
+      System.out.printf("Timeslot %d: (%04dhrs)\n", i, i * 200);
+      if (this.airingMovies[i] == null) {
+        System.out.println("No movie showing.");
+      } else {
+        ControllerUtility.printMovie(this.airingMovies[i]);
+      }
+    }
   }
 }

@@ -12,6 +12,7 @@ public final class Database implements Serializable {
   private ArrayList<Admin> adminList;
   private ArrayList<Cineplex> cineplexList;
   private ArrayList<MovieGoer> movieGoerList;
+  private ArrayList<Movie> movieList;
 
   public Database() {
     // On creation deserialize data
@@ -19,6 +20,7 @@ public final class Database implements Serializable {
     adminList = new ArrayList<Admin>();
     cineplexList = new ArrayList<Cineplex>();
     movieGoerList = new ArrayList<MovieGoer>();
+    movieList = new ArrayList<Movie>();
 
     try {
       // Reading the object from a file
@@ -31,12 +33,14 @@ public final class Database implements Serializable {
       Admin[] adminArray = (Admin[]) in.readObject();
       Cineplex[] cineplexArray = (Cineplex[]) in.readObject();
       MovieGoer[] movieGoerArray = (MovieGoer[]) in.readObject();
+      Movie[] movieArray = (Movie[]) in.readObject();
 
       // Convert arrays into arrayList
       // Collections.addAll(personList, personArray);
       Collections.addAll(adminList, adminArray);
       Collections.addAll(cineplexList, cineplexArray);
       Collections.addAll(movieGoerList, movieGoerArray);
+      Collections.addAll(movieList, movieArray);
 
       in.close();
       file.close();
@@ -62,6 +66,14 @@ public final class Database implements Serializable {
   // public void setPersonList(ArrayList<Person> personList) {
   // this.personList = personList;
 
+  public ArrayList<Movie> getMovieList() {
+    return movieList;
+  }
+
+  public void setMovieList(MovieList<Movie> movieList) {
+    this.movieList = movieList;
+  }
+
   public void saveDatabase() {
     try {
       FileOutputStream file = new FileOutputStream(filename);
@@ -76,11 +88,14 @@ public final class Database implements Serializable {
       cineplexList.toArray(cineplexArray);
       MovieGoer[] movieGoerArray = new MovieGoer[movieGoerList.size()];
       movieGoerList.toArray(movieGoerArray);
+      Movie[] movieArray = new Movie[movieList.size()];
+      movieList.toArray(movieArray);
 
       // out.writeObject(personArray);
       out.writeObject(adminArray);
       out.writeObject(cineplexArray);
       out.writeObject(movieGoerArray);
+      out.writeObject(movieArray);
 
       out.close();
       file.close();

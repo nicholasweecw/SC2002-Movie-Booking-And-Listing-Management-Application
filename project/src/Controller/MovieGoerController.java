@@ -100,7 +100,7 @@ public class MovieGoerController {
       try {
         System.out.println("Please enter the Time Slot.");
         System.out.println("Available Time Slots:");
-        String cinemaCode = sc.nextLine();
+        String timeslot = sc.nextLine();
         break;
         // Search in database
       } catch (Exception e) {
