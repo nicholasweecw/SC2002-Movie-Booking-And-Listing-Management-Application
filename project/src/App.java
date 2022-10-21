@@ -44,8 +44,32 @@ public class App {
     System.out.println(seat.getAssignedTo(1).getId());
     System.out.println(seat.getAssignedTo(1).getName());
     Cinema cinema = new Cinema("ACD", CinemaClass.STANDARD);
-    for (int i = 0; i < db.movieList.size(); i++) {
-      cinema.setMovieAtTimeslot(db.movieList.get(i), i);
+    // String[] names = {
+    //   "Terminator",
+    //   "Slicer",
+    //   "Ninja",
+    //   "Hello",
+    //   "Robot",
+    //   "Dog",
+    // };
+    // for (int i = 0; i < names.length; i++) {
+    //   Movie m = new Movie(
+    //     i,
+    //     names[i],
+    //     MovieStatus.PREVIEW,
+    //     MovieType.BLOCKBUSTER,
+    //     AgeRestriction.PG13,
+    //     "S",
+    //     "Bob",
+    //     "Muthu",
+    //     0
+    //   );
+    //   ArrayList<Movie> movies = db.getMovieList();
+    //   movies.add(m);
+    //   db.setMovieList(movies);
+    // }
+    for (int i = 0; i < db.getMovieList().size(); i++) {
+      cinema.setMovieAtTimeslot(db.getMovieList().get(i), i);
     }
     db.saveDatabase();
     cinema.printAvailableSeats(1);

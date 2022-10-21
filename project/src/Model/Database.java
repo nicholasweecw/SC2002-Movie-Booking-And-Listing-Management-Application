@@ -70,7 +70,7 @@ public final class Database implements Serializable {
     return movieList;
   }
 
-  public void setMovieList(MovieList<Movie> movieList) {
+  public void setMovieList(ArrayList<Movie> movieList) {
     this.movieList = movieList;
   }
 
