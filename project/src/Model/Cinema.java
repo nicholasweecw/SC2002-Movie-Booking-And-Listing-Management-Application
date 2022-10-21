@@ -62,10 +62,10 @@ public class Cinema implements Serializable {
     //   "%" + (Constants.NUMCOLS + 3) * 2 + "s",
     //   "Movie Screen"
     // );
-    // This value is hardcoded.
     int row = seatnumber / 10;
     int col = seatnumber % 10;
     System.out.printf("%d %d\n", row, col);
+    // This value is hardcoded.
     String s = String.format("%" + 34 + "s", "Movie Screen");
     // System.out.printf("%15s\n", s);
     System.out.println(s);
