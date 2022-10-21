@@ -26,31 +26,27 @@ public class App {
   }
 
   public static void initialise() {
-    // Database db = new Database();
+    Database.initDatabase();
     MovieController movieController = new MovieController();
     InputController inputController = new InputController();
   }
 
   public static void timothy() {
     Admin admin = new Admin("timothyjblew", "password", "Timothy");
-    // Movie movie = admin.createMovieListing();
-    Movie movie = new Movie(
-      2,
-      "Topgun",
-      MovieStatus.COMING_SOON,
-      MovieType.TWO_D,
-      AgeRestriction.PG13,
-      "flying planes",
-      "Tom Cruise",
-      "cast is a string, is it worth changing it to String[]?",
-      0
-    );
-    movie.getEverything();
+    // admin.createMovieListing();
+    ArrayList<Movie> movies = Database.getMovieList();
+    for (Movie movie: movies) {
+      movie.getEverything();
+      System.out.println();
+    }
 
-    movie = admin.updateMovieListing(movie);
-    movie.getEverything();
+    admin.updateMovieListing();
+    for (Movie movie: movies) {
+      movie.getEverything();
+      System.out.println();
+    }
 
-    admin.deleteMovieListing(movie);
+    // admin.deleteMovieListing();
   }
 
   public static void hochi() {

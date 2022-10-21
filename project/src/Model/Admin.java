@@ -15,19 +15,21 @@ public class Admin extends User {
   }
 
   public Movie createMovieListing() {
-    // MovieController movieController = new MovieController();
+    System.out.println("Creating movie listing");
     Movie m = MovieController.createMovie();
     return m;
   }
 
-  public Movie updateMovieListing(Movie movie) {
-    // MovieController movieController = new MovieController();
-    Movie m = MovieController.updateMovie(movie);
-    return m;
+  public Movie updateMovieListing() {
+    System.out.println("Updating movie listing");
+    Movie movie = MovieController.getMovieById();
+    movie = MovieController.updateMovie(movie);
+    return movie;
   }
 
-  public void deleteMovieListing(Movie movie) {
-    // MovieController movieController = new MovieController();
+  public void deleteMovieListing() {
+    System.out.println("Deleting movie listing");
+    Movie movie = MovieController.getMovieById();
     MovieController.deleteMovie(movie);
   }
 }

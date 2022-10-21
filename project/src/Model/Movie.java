@@ -110,6 +110,7 @@ public class Movie implements Serializable {
     System.out.println(this.getAgeRestriction());
     System.out.println(this.getSynopsis());
     System.out.println(this.getDirector());
+    System.out.println(this.getCast());
   }
 
 }
