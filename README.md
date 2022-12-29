@@ -3,4 +3,4 @@
 MOBLIMA is an application to computerize the processes of making online booking and purchase of movie tickets, listing of movies and sale reporting. It will be used by the movie-goers and cinema staff.
 
 ## Unified Modelling Language (UML) Diagram
-![UML_Class_Diagram.pdf](res/SS4-grp6_UML_CLASS_DIAGRAM.pdf)
+![UML_Class_Diagram.pdf](res/UML_CLASS_DIAGRAM.png)
