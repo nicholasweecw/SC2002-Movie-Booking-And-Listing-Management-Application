@@ -29,4 +29,4 @@ validation will be done upon entering the cinema
 [Vinaya](https://github.com/Vinaya72 "Vinaya")
 
 ## Video
-[Video Run Through of the App](res/)
+[Video Run Through of the App](res/Explanation_Video.mp4)
