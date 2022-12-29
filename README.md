@@ -17,6 +17,9 @@ consider it in your design
 * Senior citizen can be purchased online without validation of identity or age. The
 validation will be done upon entering the cinema
 
+## Video
+[Video Walkthrough of the App](https://www.youtube.com/watch?v=vlSYCEGigPw&ab_channel=NicholasWee)
+
 ## Contributors
 [Nicholas Wee](https://github.com/nicholasweecw "Nicholas Wee")
 
@@ -27,6 +30,3 @@ validation will be done upon entering the cinema
 [Timothy Lew](https://github.com/timothy-lew "Timothy Lew")
 
 [Vinaya](https://github.com/Vinaya72 "Vinaya")
-
-## Video
-[Video Run Through of the App](https://www.youtube.com/watch?v=vlSYCEGigPw&ab_channel=NicholasWee)
