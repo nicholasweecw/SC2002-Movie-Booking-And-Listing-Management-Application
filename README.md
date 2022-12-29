@@ -6,4 +6,4 @@ MOBLIMA is an application to computerize the processes of making online booking 
 ![UML_Class_Diagram.pdf](res/UML_CLASS_DIAGRAM.png)
 
 ## Assumptions
-*This is a single-user application and there is no need to consider concurrent access
+* This is a single-user application and there is no need to consider concurrent access
