@@ -17,7 +17,7 @@ consider it in your design
 * Senior citizen can be purchased online without validation of identity or age. The
 validation will be done upon entering the cinema
 
-## Contributions
+## Contributors
 [Nicholas Wee](https://github.com/nicholasweecw "Nicholas Wee")
 
 [Ng Ho Chi](https://github.com/nghochi123 "Ng Ho Chi")
